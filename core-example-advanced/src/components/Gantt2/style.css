@@ -1,0 +1,156 @@
+.table-box {
+  /* padding: 15px; */
+  text-align: center;
+  font-size: 14px;
+}
+
+.table {
+  border: 1px solid #ddd;
+  border-style: solid solid none solid;
+  border-radius: 8px;
+  display: inline-block;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.table-body {
+  max-height: 280px;
+}
+
+.table .tr:last-of-type {
+  border-radius: 8px;
+}
+
+.tr {
+  display: flex;
+  border: 1px solid #ddd;
+  border-style: none none solid none;
+}
+
+.tr.head{
+  position: sticky;
+  top: 0;
+  z-index: 3001;
+  background-color: #fff;
+}
+
+.tr:hover {
+  background-color: #f5f5f5;
+  /*cursor: pointer;*/
+}
+
+/* .tr:after {
+  content: '';
+  width: 0;
+  height: 0;
+  display: block;
+  clear: both;
+  line-height: 0;
+  visibility: hidden;
+} */
+
+.tr-left,
+.tr-right {
+  position: relative;
+  /* float: left; */
+}
+
+.tr .tr-left {
+  position: sticky;
+  left: 0;
+  background-color: #fff;
+  z-index: 3000;
+}
+
+.tr .tr-left .td {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 78px;
+}
+
+.tb .tr-right {
+  width: calc(100% - 240px);
+  min-height: 30px;
+  /* background-image: url(img/bg.png);
+  background-size: auto 2px; */
+}
+
+.tb .tr-right .td {
+  border: 1px solid #ddd;
+  border-style: none dotted none none;
+}
+
+.td {
+  float: left;
+  width: 180px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #ddd;
+  border-style: none solid none none;
+}
+
+.tr-left .td:last-of-type {
+  border: 1px solid dimgray;
+  border-style: none solid none none;
+}
+
+.tr-right .td:last-of-type {
+  border-style: none;
+}
+
+.dragItem {
+  position: absolute;
+  height: 100%;
+  line-height: 30px;
+  display: inline-block;
+  background-color: rgb(66, 133, 244);;
+  opacity: 0.4;
+  color: white;
+  left: 0;
+  cursor: move;
+  min-width: 2px;
+  overflow: hidden;
+}
+.dragItem:hover{
+  opacity: 0.6;
+}
+
+.dragBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.day-title0 {
+  width: 100%;
+  /* color: brown; */
+}
+.day-title0 {
+  /* background-color: #dddddd; */
+}
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background-color: #f5f5f5;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: darkgray;
+}
+::-webkit-scrollbar-thumb {
+  height: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: dimgrey;
+}
+.rightLine {
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0 !important;
+  float: right !important;
+  background-color: #1e90ff;
+  cursor: e-resize;
+}
